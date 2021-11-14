@@ -1,0 +1,20 @@
+CONNECTION_URL = mongodb+srv://rentmecar:gEm5fIWiqvrRkrU8@cluster0-w5oua.mongodb.net/rentmecar?retryWrites=true&w=majority
+
+USER_EMAIL = rentmecar7@gmail.com
+USER_EMAIL_PASSWORD = pbiipddspjvjscws
+
+CLOUD_NAME = ddjbu4u8c
+API_KEY =679666363715424
+API_SECRET = UUiix-mjlj4iD3A8Ii3lIVJMGGo
+CLOUDINARY_URL=cloudinary://679666363715424:UUiix-mjlj4iD3A8Ii3lIVJMGGo@ddjbu4u8c
+
+
+JWT_SECRET= thisissecretkey
+
+
+
+
+ACCOUNT_SID = AC0b8b0934ccb799ec378358b0ac2cb138
+AUTH_TOKEN = e45e3fe2fa6fca674c3fea94489636c5
+
+TWILIO_NO

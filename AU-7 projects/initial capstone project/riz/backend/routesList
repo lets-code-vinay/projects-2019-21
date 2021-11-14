@@ -1,0 +1,43 @@
+1. get --> hi from server
+            localhost:2001/  
+
+2. post --> bodydata response
+            localhost:2001/data
+
+3. post --> signup user
+             localhost:2001/api/signup
+
+4. post --> signin user
+            localhost:2001/api/signin
+        copy token and paste in header
+
+5. post --> to enter website    paste token in header
+            localhost:2001/api/profile
+
+6. post --> signup admin
+             localhost:2001/api/admin/signup
+
+7. post --> signin admin
+            localhost:2001/api/admin/signin
+        copy token and paste in header
+
+8. post --> paste token in header
+            localhost:2001/api/admin/profile
+
+9. post ==> create new category
+        localhost:2001/api/category/create
+
+10. get --> to get all categories
+            localhost:2001/api/category/getCategory
+
+11. post --> paste token in header and paste "parentId":" " in body along with "name":" "
+            localhost:2001/api/category/create
+
+12. post --> creating new category
+             localhost:2001/api/product/create
+
+13. post --> Add to categories
+             localhost:2001/api/user/cart/addtocart
+
+14. post --> Admin signout
+             localhost:2001/api/admin/signout

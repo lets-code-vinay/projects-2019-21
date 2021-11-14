@@ -1,0 +1,10 @@
+1. 
+        const errors = validationResult(req);
+        // return res.status(400).json({errors: errors.array(),message:errors })
+    Got errors in validations
+
+2.  
+    cartItems: is not printing
+
+3. 
+    After signinup still showing LOading.....

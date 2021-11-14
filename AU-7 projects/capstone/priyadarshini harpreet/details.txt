@@ -1,0 +1,16 @@
+aclone-4da0f.web.app
+
+
+amazon clone
+
+
+logged in user can rate
+after checkout address
+card payment
+redirect to order page
+
+why captcha not working?
+go to console -> network -> reload page
+find any api/route on local host
+
+chat

@@ -1,0 +1,15 @@
+Create a CRUD application using express generator, Mongo and Mongoose.
+Input Fields (all fields are required)
+    Name - string
+    Username- string, unique
+    Email: string
+    Password: string
+    Group; array of string
+
+
+
+
+
+
+
+

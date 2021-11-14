@@ -1,0 +1,120 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    background-color: black;
+    padding: 10px;
+}
+p, h1, b{
+    color: #5eff00;
+}
+.topHor{
+    background-color: yellow;
+    width: 100%;
+    height: 20px;
+    top: 0px;
+}
+.topRoad{
+    position: relative;
+    background-color: white;
+    width: 100%;
+    height: 20px;
+    margin-top: 30px;
+    z-index: -1;
+    display: flex;
+}
+.topRoad > .line{
+    background-color: white;
+}
+.line{
+    background-color: white;
+    border: 1px solid yellow;
+    width: 100px;
+    height: 20px;
+    margin-top: 100px;
+    margin-left: 20px;
+}
+.downRoad{
+    background-color: white;
+    width: 100%;
+    height: 20px;
+    margin-top: 180px;
+}
+.tagLine{
+    position: absolute;
+    top: 40px;
+    left: 500px;
+    color: yellow;
+}
+.bottagLine{
+    position: absolute;
+    top: 135px;
+    left: 300px;
+    color: yellow;
+}
+.bottagLine2{
+    position: absolute;
+    top: 135px;
+    left: 800px;
+    color: yellow;
+}
+.parkingFloor{
+    display: flex;
+    margin-top: 5px;
+}
+.parkingFloor > .parkingMarkings {
+    margin-left: 125px;
+    border: 1px solid rgb(104, 46, 46);
+    
+    /*background-color: white;*/
+}
+.parkingMarkings{
+    position: relative;
+}
+.parking{
+    position: absolute;
+    margin-left: 50px;
+    top: 80px;
+    font-size: 90px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.strips{
+    width: 20px;
+    height: 250px;
+    background-color: white;
+}
+.car{
+    position: relative;
+}
+img{
+    position: relative;
+    width: 200px;
+    height: 250px;
+    margin-left: -15px;
+}
+/* Right going cars*/
+#car4:hover, #car6:hover, #car8:hover {
+    animation-name: carRight;
+    animation-duration: 5s;
+}
+@keyframes carRight{
+    0%  { top: 0px; left: 0px;}
+    25% { top: 300px; left: -10px;}
+    50% { rotate: 60deg; left:-70px;}
+    75% { rotate:85deg; top: 250px; left: 100px;}
+    100%{ rotate: 90deg;  top: 250px; left: 2000px;}
+}
+/* left going cars*/
+ #car2:hover, #car3:hover, #car5:hover, #car7:hover, #car9:hover {
+    animation-name: carLeft;
+    animation-duration: 5s;
+}
+@keyframes carLeft{
+    0%  { top: 0px; right: 0px;}
+    25% { top: 300px; right: -10px;}
+    50% { rotate: 60deg; right:-70px;}
+    75% { rotate:85deg; top: 250px; right: 100px;}
+    100%{ rotate: 90deg;  top: 250px; right: 2000px;}
+}

@@ -1,0 +1,52 @@
+<%- include('../_layouts/adminheader') %>
+
+<h2 class="page-title"> Products</h2>
+<a href="/admin/products/add-product" class="btn btn-primary ">Add new Product</a>
+<br> <br>
+
+<!--If not image there show message-->
+<% if(count > 0 ) { %>
+
+<table class="table table-stripped ">
+    <thead>
+        <tr class="home">
+            <th> Product</th>
+            <th> Price</th>
+            <th> Product Category</th>
+            <th> Productt Image</th>
+            <th> Edit</th>
+            <th> Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+    <% products.forEach(function(product) {%>
+        <tr >
+        <td> <%= product.title %></td> <!-- use $ below-->
+        <td> $<%= parseFloat(product.price).toFixed(2) %></td> <!--parseFloat to convert value in decimal, toFixed(2) for decimal value for 2 places-->
+        <td> <%= product.category %></td>
+        <td>
+            <% if( product.image = ""){ %> <!--means no images-->>    
+                <img src="/images/noimage.png" alt=""> <!--image thumb nail when blank image-->
+                <% } else {%>
+                        <img src="/product_image/<%= product._id %>/<%= product.image %>">
+                        <!--creating folder with id name-->
+                    <% } %>
+            </td>
+
+        <td><a href="/admin/products/edit-products/<%= product._id %>">Edit</a></td>
+                <td><a href="/admin/products/delete-product/<%=product._id %>" class="confirmDeletion">Delete</a></td>
+                
+        </tr>
+    <% })%>
+</tbody>
+</table>
+
+
+<% } else { %>
+
+<h3 class="text-center"> There are no Product  </h3>
+    <% }  %>
+
+<%- include('../_layouts/adminfooter') %>
+

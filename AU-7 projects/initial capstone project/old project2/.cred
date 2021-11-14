@@ -1,0 +1,4 @@
+db- hawker
+pw-hawker21
+name- onlineHawker
+mongodb+srv://<username>:<password>@cluster0.lxhhh.mongodb.net/<dbname>?retryWrites=true&w=majority

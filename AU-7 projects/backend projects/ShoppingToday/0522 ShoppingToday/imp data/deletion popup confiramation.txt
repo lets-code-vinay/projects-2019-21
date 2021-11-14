@@ -1,0 +1,13 @@
+Deletion popup confiramtion
+
+$(function(){
+    
+    $('a.confirmDeletion').on('click', function(){ //a.confirmDeletion= <a class="confirmDeletion">
+                                                on click is function
+        if(!confirm('Confirm deletion'))
+        return false;
+    })
+})
+
+
+add this file to .js file

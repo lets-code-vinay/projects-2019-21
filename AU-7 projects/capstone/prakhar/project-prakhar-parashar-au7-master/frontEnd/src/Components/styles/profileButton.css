@@ -1,0 +1,18 @@
+#userName {
+    display: inline;
+    margin-top: 15px;
+    font-weight: 200;
+}
+#profilePic { 
+        all: unset;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        
+}
+
+#userInfo {
+    display: grid;
+    grid-template-columns: 80px 80px;
+    margin-left : -100px;
+}

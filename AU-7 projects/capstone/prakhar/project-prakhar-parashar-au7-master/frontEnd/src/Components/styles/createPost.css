@@ -1,0 +1,9 @@
+button {
+    all:unset;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+#modal {
+    width: 600px;
+}

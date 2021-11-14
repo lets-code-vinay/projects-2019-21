@@ -1,0 +1,81 @@
+################# Homepage route ###########################
+get localhost:8080/
+get https://rentmecar7.herokuapp.com/
+
+
+################# Owner route ###########################
+
+#### Registering Owner of  Vehicle ######
+ post https://localhost:8080/api/user/register
+ post https://rentmecar7.herokuapp.com/api/user/register
+ Content-Type: application/json
+
+{
+    "name": "vinay Maurya",
+    "email": "vinay.shermauryan@gmail.com",
+    "password": "vinay1234",
+    "contact": 1434568899,
+    "adhaarNumber": 413466789012,
+    "drivingLicense": "PB1112344",
+    "age": 27,
+    "role": "Owner"
+}
+
+#### Account Activation of Owner ######
+get 
+http://localhost:8080/api/accountactivation/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MC40MTQ2NTMyMzExNjUzMTUzLCJpYXQiOjE1OTM0MTQxNTUsImV4cCI6MTU5OTQxNDE1NX0.t0wbXik30uMP2Q8KHsTXq7mn2PIT7X9WsMG_wTvCLG4?user=Owner
+ 
+ output:- message	"Account activated Succes…rentmecar.com and Login"
+----------------------------------------------------------
+
+### login owner of vehicle ###
+post https://localhost:8080/api/user/login
+ Content-Type: application/json
+{    
+    "email": "vinay.shermauryan@gmail.com",
+    "password": "vinay1234",
+    "role": "Owner"
+}
+output
+{
+    "jwt": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWY5OTIwYmNjZDA4OTI2MDAxM2FiNmUiLCJpYXQiOjE1OTM0MTQ4MTgsImV4cCI6MTU5OTQxNDgxOH0.jgyWs0LmVLrJesvenNg_a4jW24jqd6GItQf1DyIQq8c",
+    "user": {
+        "profilePicture": null,
+        "isVerified": true,
+        "isBlocked": false,
+        "_id": "5ef9920bccd089260013ab6e",
+        "name": "Vinu",
+        "email": "vinay.shermauryan@gmail.com",
+        "password": "$2b$10$V/kh6h9S2Zdya9.qcBtA8eNIYMwyUVGC0gxRLxeiu6hq1JiUMEJYq",
+        "contact": 1434568899,
+        "adhaarNumber": "413466789012",
+        "drivingLicense": "PB1112344",
+        "age": 27,
+        "role": "Owner",
+        "activationToken": null,
+        "createdAt": "2020-06-29T07:02:35.505Z",
+        "updatedAt": "2020-06-29T07:03:12.711Z",
+        "__v": 0,
+        "jwt": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWY5OTIwYmNjZDA4OTI2MDAxM2FiNmUiLCJpYXQiOjE1OTM0MTQ4MTgsImV4cCI6MTU5OTQxNDgxOH0.jgyWs0LmVLrJesvenNg_a4jW24jqd6GItQf1DyIQq8c"
+    }
+}
+----------------------------------------------------------
+###  Posting vehicle on rent ###
+post  http://localhost:8080/api/owner/rentngvehicle
+Authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWY5OTIwYmNjZDA4OTI2MDAxM2FiNmUiLCJpYXQiOjE1OTM0MTQ4MTgsImV4cCI6MTU5OTQxNDgxOH0.jgyWs0LmVLrJesvenNg_a4jW24jqd6GItQf1DyIQq8c",
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

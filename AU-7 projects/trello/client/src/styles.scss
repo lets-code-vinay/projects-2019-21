@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+$bg-primary: #333;
+$bg-dark: #000;
+$bg-light: #666;
+
+$fg-primary: #eee;
+$fg-alt1: #fff;
+$fg-alt2: #ccc;
+
+$large-text: 2rem;
+$larger-text1: 1.5rem;
+$larger-text2: 1.2rem;
+$smaller-text: 0.8rem;
+
+@mixin flex-center-sb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: $bg-primary;
+  color: $fg-primary;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h4, h6 {
+  margin: 0 0 0.5em 0;
+}
+
+h1 {
+  font-size: $large-text;
+}
+
+h2 {
+  font-size: $larger-text1;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input, label, button {
+  font-size: inherit;
+}
+
+input {
+  padding: 0.3em;
+}
+
+header {
+  background: $bg-dark;
+  color: $fg-alt2;
+  font-size: $smaller-text;
+}
+
+nav {
+  @include flex-center-sb;
+  height: 3rem;
+  padding: 0 1rem;
+
+  .brand {
+    flex: 1;
+    font-size: $larger-text1;
+  }
+
+  img {
+    height: 75%;
+    margin: 0 1rem;
+  }
+
+  .button {
+    margin-left: 1rem;
+    background: $fg-primary;
+    border: 1px solid $fg-alt1;
+    border-radius: 3px;
+    color: $bg-primary;
+    padding: 0.3em 0.5rem;
+
+    &:hover {
+      background: $fg-alt2;
+      color: $bg-dark;
+    }
+  }
+}
+
+button.add-button {
+  width: 100%;
+  padding: 0.3em;
+}
+
+main {
+  width: 1299px;  // Superstitious much?
+  max-width: 95vw;
+  margin: 0.5rem auto;
+}
+
+.centred, .centered {
+  text-align: center;
+}
+
+.icon {
+  margin-left: 0.2em;
+  cursor: pointer;
+}
+
+.archived {
+  text-decoration: line-through;
+}
+
+.user-panel {
+  background: $bg-light;
+  width: 50%;
+  margin: 6rem auto;
+  padding: 2em;
+
+  .form-field {
+    @include flex-center-sb;
+    background: $bg-dark;
+    margin-bottom: 1px;
+    padding: 0.5em;
+
+    input {
+      width: 70%;
+    }
+  }
+
+  .errors {
+    background: #ffdab9;
+    color: red;
+    font-weight: bold;
+    margin: 0.3em 0;
+    padding: 0.5em;
+  }
+
+  .button-holder {
+    margin-top: 1em;
+  }
+
+  button {
+    background: $bg-dark;
+    border: 1px solid $bg-dark;
+    border-radius: 0;
+    color: $fg-primary;
+    padding: 0.5em 1.5em;
+
+    :focus, :hover {
+      color: $fg-alt1;
+    }
+  }
+}
+
+.board-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1em;
+
+  .board-card {
+    max-width: 350px;
+    background: $bg-light;
+
+    &__content {
+      min-height: 200px;
+      max-height: 300px;
+      overflow: hidden;
+
+      img {
+        display: block;
+        border: 1px solid white;
+        width: 95%;
+        object-fit: cover;
+        margin: 0.2em auto;
+      }
+    }
+
+    &__footer {
+      @include flex-center-sb;
+      background: $bg-dark;
+      font-size: $larger-text2;
+      height: $large-text;
+      padding: 0 0.5em;
+    }
+  }
+}
+
+.list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1em;
+
+  .list-card {
+    max-width: 350px;
+    background: $bg-light;
+
+    &__header {
+      @include flex-center-sb;
+      background: $bg-dark;
+      font-size: $larger-text2;
+      height: $large-text;
+      padding: 0 0.5em;
+    }
+
+    &__content {
+      min-height: 200px;
+    }
+  }
+}
+
+.task-list {
+  margin: 0.2em;
+  padding: 0;
+  list-style-type: none;
+
+  &__item {
+    @include flex-center-sb;
+    background: $bg-primary;
+    margin-bottom: 1px;
+    padding: 0.4em;
+
+    div.text {
+      flex: 1;
+    }
+
+    input {
+      width: 100%;
+    }
+
+    input.update {
+      flex: 1;
+    }
+  }
+}

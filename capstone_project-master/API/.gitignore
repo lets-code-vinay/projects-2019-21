@@ -1,0 +1,6 @@
+node_modules
+package-lock.json
+error_log
+Notes.txt
+.env
+sendgrid.env

@@ -1,0 +1,29 @@
+{
+  "name": "sequelize-app",
+  "version": "1.0.0",
+  "description": "Sequelize demonstration",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "author": "Sundeep Charan Ramkumar",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "express-validator": "^6.4.0",
+    "hbs": "^4.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "nodemailer": "^6.4.5",
+    "pg": "^7.18.2",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.5"
+  },
+  "devDependencies": {
+    "jest": "^25.1.0",
+    "nodemon": "^2.0.2"
+  }
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="0721cc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Form Validation</title>
+</head>
+<body>
+    <div class="formMainBody" id="formMainBody">
+        <form id="sign-up">
+            <div class="form-row" >
+              <div class="form-group col-md-6">
+                <label  for="inputEmail4">Email</label>
+                <div id="invalid" class="invalid"></div>        
+                <input type="text" name="email" class="form-control" id="inputEmail" placeholder="Email">
+                </div>
+            
+              <div class="form-group col-md-6">
+                <label for="inputPassword4">Password</label>
+                <input type="password" class="form-control" name="password" id="inputPassword4" placeholder="Password">
+                <div id="invalid" class="invalid"></div>        
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputAddress">Address</label>
+              <div id="invalid" class="invalid"></div>
+              <input type="text" name="address1" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            </div>
+            <div class="form-group">
+              <label for="inputAddress2">Address 2</label>
+              <div id="invalid" class="invalid"></div>
+              <input type="text" name="address2" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputCity">City</label>
+                <input type="text" name="city" class="form-control" id="inputCity">
+                <div id="invalid" class="invalid"><p id="p"></p></div>      
+
+              </div>
+              <div class="form-group col-md-4">
+                <label for="inputState" >State</label>
+                <select id="inputState" name ="state" class="form-control">
+                  <option selected id="chooseState">Choose State</option>
+                  <option>Punjab</option>
+                  <option>Delhi</option>
+                  <option>Haryana</option>
+                  <option>UP</option>
+                </select>
+                <div id="invalid" class="invalid"></div>      
+              </div>
+
+              <div class="form-group col-md-2">
+                <label for="inputZip">Zip</label>
+                <input type="text" class="form-control" id="inputZip">
+                <div id="invalid" class="invalid"><p id="p"></p></div>      
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                  Accept Terms & conditions
+                </label>
+                <div id="invalid" class="invalid"></div>      
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Sign in</button>
+          </form>
+    </div>
+    <script>
+        const signup = document.getElementById('sign-up')
+        const signupJ = $('#sign-up');
+        
+        // console.log(signup);
+        // console.log(signupJ[0]);
+
+        signupJ.on('submit',function(event){
+            event.preventDefault();
+                //the target the u=inputfor validation 
+            const emailInput = $(this).find('[name="email"]');
+            const passwordInput = $(this).find('[name = "password"]');
+
+            const email = emailInput.val();
+            const password = passwordInput.val();
+
+            console.log('Entered email is:', email)
+              if(!email || email==null){
+                const emailRequired = "Please provide a valid email";
+                emailInput.siblings('div.invalid').text(emailRequired)
+              }
+              else{
+                emailInput.siblings('div.invalid').text(null)
+              }
+            
+
+            console.log('password:', password)
+            if(!password || password == null){
+              const passwordRequired = "Please provide a Valid password";
+              passwordInput.siblings('div.invalid').text(passwordRequired)
+            }
+          
+            const address1Input = $(this).find('[name="address1"]');
+            const address2Input = $(this).find('[name="address2"]');
+            
+            const address1 = address1Input.val();
+            const address2 = address2Input.val();
+
+            if(!address1 || address1 == null ){
+              const addressRequired = "Kindly provide address"
+              address1Input.siblings('div.invalid').text(addressRequired);
+              
+              
+            }
+            if( !address2 || address2 == null){
+              const addressRequired = "Kindly provide address"
+              address2Input.siblings('div.invalid').text(addressRequired);
+              
+            }
+            console.log('address1 is:', address1)
+            console.log('address2 is:', address2)
+          
+          const cityInput = $(this).find('[name = "city"]')
+          const city = cityInput.val();
+
+          if(!city || city == null){
+            const cityRequired = "Please enter your city";
+            cityInput.siblings('div.invalid').text(cityRequired);
+          }
+          console.log(city)
+          
+          const stateInput = $(this).find('[name = "state"]')
+          const option = $(this).find('option')
+          const state = stateInput.val();
+          const chooseState = $(this).find('[id="chooseState"]')
+
+          if(!state || state == chooseState){
+            const stateRequired = "Please enter your state";
+            // for( var i =0; i <= option.length; i++){
+            //     if(!option){
+                   const stateRequired = "Please enter your state";
+                  stateInput.siblings('div.invalid').text(stateRequired);
+
+            //     }
+            // }
+          }
+          console.log('Here is the state:',state)
+          console.log('Here is the option:',option)
+          
+          
+          })
+        /*
+        //to console event
+            console.log(event)
+            //to console children
+            console.log('Consoling childer of form',$(this).children())
+            //to console the childeren and siblings
+            console.log('Consoling the inside div', $(this).children().siblings())
+            //to get children of children use
+            console.log('Children of children', $(this).children().children())
+            //to get a particular grandchild of sign up use
+            console.log('For Grandchild', $(this).children().children('input'))
+            //To find any element use find()
+            console.log('To find any element', $(this).find('input'));
+            //To get any element by attribute use find('[attribute ="attribute name"]')
+            console.log('To get by attribute',$(this).find('[type="email"]') )
+            //to print value
+            console.log("to print value is :", $(this).find('[type="email"]').val())
+         
+            */
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+.landing-main {
+    background-color: #3b5998;
+    margin-top: -25px;
+    display: flex;
+    padding: 130px;
+    margin-bottom: -47px;
+}
+
+.left-main {
+    width: 70%;
+}
+
+.right-main {
+    color: #fff;
+    font-family: sans-serif;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+.right-main > h1 {
+    width: 80%;
+}
+
+.right-main > p {
+    width: 75%;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.share-div {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.create-btn {
+    background-color: #333;
+    padding: 20px 30px 20px 30px;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.2s ease-in;
+    outline: none;
+}
+
+.create-btn:hover {
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #333;
+    background: none;
+    border-radius: 20px 0 20px 0;
+}
+
+.login-btn {
+    margin-left: 23px;
+    background: none;
+    border: 1px solid #333;
+    padding: 19px 40px 19px 40px;
+    text-decoration: none;
+    color: #333;
+    transition: 0.5s;
+}
+
+.login-btn:hover {
+    text-decoration: none;
+    color: #fff;
+    border-radius: 20px 0 20px 0;
+}
+
+.span-dev {
+    color: #30bfbf;
+}

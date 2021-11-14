@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://august21:augustTest21@cluster0.5ydx1.mongodb.net/retest?retryWrites=true&w=majority",
+  "jsonWebTokenSecret": "helloWorld"
+}

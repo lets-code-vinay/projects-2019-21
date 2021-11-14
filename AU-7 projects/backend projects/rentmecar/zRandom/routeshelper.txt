@@ -1,0 +1,19 @@
+
+-----car models---
+--------to add new vehicle------
+localhost:1234/api/model/add-vehicle
+
+--------to get all vehicles-----
+localhost:1234/api/model/all
+
+--------to get all vehicle by id-----
+localhost:1234/api/model/vehicle/:id
+
+
+--------car maker----------------
+--------to get all makers---------
+localhost:1234/api/maker/all
+
+--------to get all makers---------
+localhost:1234/api/maker/:id
+

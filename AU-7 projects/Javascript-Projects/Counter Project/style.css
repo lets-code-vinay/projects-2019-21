@@ -1,0 +1,53 @@
+body {
+    background-color: tomato;
+}
+
+
+.container {
+    background-color: whitesmoke;
+    margin: 0 auto;
+    width: 50%;
+    margin-top: 120px;
+    padding-bottom: 50px;
+}
+
+h1 {
+    padding-top: 25px;
+    color: black;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.number {
+    font-size: 130px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 20px;
+
+}
+
+.btn1 {
+    background-color: rgb(52, 196, 16);
+    margin-left: 32%;
+    padding: 10px 10px 10px 10px;
+    border: 0;
+    color: white;
+    font-weight: bold;
+}
+
+.btn1:hover {
+    background-color: black;
+}
+
+.btn2 {
+    background-color: rgb(16, 124, 196);
+    padding: 10px 10px 10px 10px;
+    color: white;
+    font-weight: bold;
+    margin-left: 25px;
+}
+
+.btn2:hover {
+    background-color: black;
+}

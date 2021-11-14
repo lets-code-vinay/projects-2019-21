@@ -1,0 +1,30 @@
+<%- include('../_layouts/adminheader') %>
+
+<h2 class="page-title"> Edit Page</h2>
+<a href="/admin/pages" class="btn btn-primary ">Back to all Pages</a>
+<br> <br>
+<form method="POST" action="/admin/pages/edit-page/<%= id %>" >
+    <!--<form method="POST" action="/admin/pages/edit-page/<%= slug %>" >-->
+    <div class="form-group">
+        <label for=" ">Title</label>
+        <input  name="title" value="<%= title %>" placeholder="Title" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for=" ">Slug</label>
+        <input type="text" name="slug" value="<%= slug %>" placeholder="Slug" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for=" ">Content</label>
+        <textarea  name="content" value="<%= content %>" placeholder="Content" class="form-control" cols="30" rows="10"></textarea>
+    </div>
+
+<!--<input type="hidden" name="id" value="<%= id%>">
+--> 
+   <button class="btn btn-primary"> Submit</button>
+
+</form>
+
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+<%- include('../_layouts/adminfooter') %>  <!--no space after include-->

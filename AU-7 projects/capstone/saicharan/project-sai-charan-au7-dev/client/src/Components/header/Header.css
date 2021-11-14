@@ -1,0 +1,83 @@
+.header__input {
+}
+.topnav {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  justify-content: center;
+  flex: 0.9;
+  overflow: hidden;
+  background-color: transparent;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  background: -webkit-linear-gradient(to right, #5b86e5, #36d1dc);
+  background: linear-gradient(to right, #5b86e5, #36d1dc);
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: grey;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: transparent;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: transparent;
+  color: black;
+}
+
+.topnav .icon {
+  display: none;
+}
+.header__input {
+  display: flex;
+}
+
+.header__input > input[type="text"] {
+  border-width: 0px;
+  border: none;
+  width: 130px;
+
+  background-color: transparent;
+  color: blanchedalmond;
+  border-radius: 50px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+.header__input > input[type="text"]:focus {
+  -webkit-appearance: none;
+  outline-width: 0;
+  border-width: 0px !important;
+  width: 50vw;
+  box-shadow: none !important;
+  background-color: black;
+  color: blanchedalmond;
+  border-radius: 50px;
+}
+
+.header__logout {
+  display: flex;
+  float: 0.5em;
+}
+
+.custom__logo {
+  width: 100px;
+  height: 100px;
+  align-items: flex-start;
+  background: white;
+  -moz-border-radius: 70px;
+  -webkit-border-radius: 70px;
+  border-radius: 70px;
+}

@@ -1,0 +1,5 @@
+vs-medcare.netlify.com
+nodemailer- otp- verification  lnk
+chnge pw
+appointment email
+super admin from database

@@ -1,0 +1,14 @@
+// chances in jwt, beccause i tried to authenticate in post it throws error of invalid email and password with right credentials
+
+//FATAL ERROR: jwtPrivateKey is not defined :- can be reslve using
+        //Fixed --> export vidly_jwtPrivatKey=anythinghere  -- without space
+
+// TypeError: user.generateAuthToken is not a function at router.post  mongoose/routes/users.js:39:24)
+        //FIXED-- Typo error
+
+//isAdmin -- not working :
+//const token = jwt.sign({_id: this._id},{isAdmin:this.isAdmin}, config.get('jwtPrivateKey'))
+//{isAdmin:this.isAdmin} was missing
+//Access denied while using  
+
+//isAdmin is not showing in payload at jwt.io               

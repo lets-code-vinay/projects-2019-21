@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4f0691558b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>To Do List</title>
+</head>
+<body>
+    <section class="container">
+        <form id="itemForm" class="my-3">
+            
+            <center><h3 class="text-capitalize mb-4">to do list</h3></center>
+            <input type="text" placeholder="Type something..." id="myInput" class="form-c">
+            <button type="button" class="btn-green" id="addBtn" onclick="toDoList();">Add Item</button>
+        </form>
+        <div class="item-container">
+            <ul id="listItem">
+                
+                <!-- <li class="checked">Pay bills
+                    <a href="#" id="itemDelete" class="delete-item item-icon icon"><i class="far fa-times-circle" style="color:red"></i></a>
+                    <a href="#" id="itemEdit" class="edit-item mx-2 item-icon icon"><i class="far fa-edit" style="color:forestgreen"></i></a>
+                    <a href="#" id="itemDone" class="complete-item mx-2 item-icon icon"><i class="far fa-check-circle"></i></a>
+                </li> -->
+                
+              </ul>
+
+            <button type="button" onclick="removeAll()" class="btn-green btn-clear">Clear</button>
+        </div>
+        
+    <script src="script.js"></script>
+</body>
+</html>

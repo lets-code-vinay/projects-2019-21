@@ -1,0 +1,4 @@
+{
+  "mongoURI":"mongodb+srv://hawker:hawker21@cluster0.1ny8q.mongodb.net/onlinehawker2?retryWrites=true&w=majority",
+  "jsonWebTokenSecret": "streetking"
+}

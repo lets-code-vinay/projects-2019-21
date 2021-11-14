@@ -1,0 +1,3 @@
+1. robin-frontend-project.netlify.app
+2. login page for user and admin
+3. otp

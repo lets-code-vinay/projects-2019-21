@@ -1,0 +1,20 @@
+.navbar{
+    padding: 10px;
+    .navbar-brand{
+        font-size: 30px ;
+        letter-spacing: 1px;
+        font-family: 'Lobster';
+        .fa-hands-helping{
+            color: #DC143C;
+            margin: 5px;
+            font-size: 30px;
+        }
+    }
+    .navbar__btn{
+        .btn{
+            margin: 5px;
+            color: white;
+            font-weight: bold;
+        }
+    }
+}

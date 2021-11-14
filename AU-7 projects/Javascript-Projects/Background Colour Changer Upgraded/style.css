@@ -1,0 +1,27 @@
+body {
+    padding-left: 40%;
+    margin-top: 20%;
+}
+
+.btn {
+    background-color: aliceblue;
+    border-radius: 5px;
+    padding: 10px 20px 10px 20px;
+    border:0;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+
+.inp {
+    margin-bottom: 10px;
+    height: 30px;
+    width: 160px;
+    text-decoration: none;
+}

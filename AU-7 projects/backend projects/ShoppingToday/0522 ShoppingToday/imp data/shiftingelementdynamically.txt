@@ -1,0 +1,55 @@
+SHIFTING ELEMENT DYNAMICALLY USING JQUERY in table
+1. install the jquery ui cdn in <script>
+   <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+2. give the id and class names to all fields
+3. new <script> tag
+4. select <tbody> for sortable as $('tbody).sortable({}) and pass an argument
+5. inside .sortable() provides the items to be shifted as 
+    item: "tr:not('.home')",  //selecting tr tag but not home class.
+6. Provide the placeholder where this gonna be shifted   
+    placeholder: "ui-state-highlight",
+7. finally update with function()
+    update: function(){ }
+8.  In function provide ids and url
+    var ids = $('tbody').sortable("serialize");  // serializing tbody elements
+8.1.  Provide=ing url for reordering
+         var url = "/admin/pages/reorder-pages";  //example route
+9 closing 
+    $.post(url, ids)     ; 
+
+10.    $('tbody).sortable({
+        items: "tr.not('.home')",
+        placeholder: "ui.state-highlight",
+        update: function(){
+            var ids = $('tbody').sortable("serialize");
+            var url = "/admin/pages/reorder-pages";
+
+            $.post(url, ids)
+        }
+    })
+11.  create new route for reordered pages
+
+12. 
+//Post reordered pages
+router.post('/reorder-pages', (req, res)=>{
+    //console.log(req.body);
+    var ids= req.body['id[]'];
+    var count = 0;
+    for(var i=0; i<ids.length ; i++){
+        var id = ids[i];
+        count++;
+       
+  //in serial order
+  (function(){
+    Page.findById(id, function(err, page){
+        page.sorting = count;
+        page.save(function(err){
+            if(err)
+            return console.log(err);
+        })
+    })
+  }) (count)     
+      
+    }
+})
+

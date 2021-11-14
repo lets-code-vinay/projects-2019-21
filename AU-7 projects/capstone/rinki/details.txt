@@ -1,0 +1,3 @@
+quick-mart-app.herokuapp.com
+changing color contrast 
+payment

@@ -1,0 +1,22 @@
+1. To storing secret using .env file 
+like to store db use
+    MONGODB_URI = mongodb+srv://vinuadmin:<password>@cluster0-kuahz.mongodb.net/seasonalJobOpportunities?retryWrites=true&w=majority
+    PASSWORD = vinu123
+2. Create new file for db.js  and paste these credential there as follow
+    const mongoose = require("mongoose");  //laoding mongoose
+    const {MONGODB_URI,MONGODB_PASSWORD} = process.env;   //loading credential from .env
+    mongoose.set('useFindAndModify', false);
+    mongoose.connect(MONGODB_URI.replace("<password>", MONGODB_PASSWORD), { //without quotes ('')
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true
+  })
+  .then(function() {
+    console.log("Database connected successfully");
+  })
+  .catch(function(err) {
+    console.log(err.message);
+  });
+3. import it to app.js
+    dotenv.config();
+    require("./db");

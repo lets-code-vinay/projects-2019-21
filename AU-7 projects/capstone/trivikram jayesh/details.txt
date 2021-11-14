@@ -1,0 +1,11 @@
+blood-line.herokuapp.com
+2.after login - landed to dashboard
+3. automatically online offline button after donating
+4. profile -> city state
+5. verify mobile number with otp from FIREBASE free sms
+6. protected delete route
+	fast2sms
+7. near by users and bloodbanks
+8. sms for organization to all
+9. delete advertisement from advertisemetn from dashboard after a specific time
+10. 

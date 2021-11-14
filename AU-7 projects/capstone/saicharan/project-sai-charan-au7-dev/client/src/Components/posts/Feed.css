@@ -1,0 +1,9 @@
+.feed__buttons {
+  display: flex;
+}
+.feed__button {
+  flex: 1;
+}
+.feed__button:first-child {
+  margin-right: 20px;
+}

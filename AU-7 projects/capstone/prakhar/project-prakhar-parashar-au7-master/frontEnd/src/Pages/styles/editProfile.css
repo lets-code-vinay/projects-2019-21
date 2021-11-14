@@ -1,0 +1,10 @@
+
+#container {
+    width : 500px;
+    margin-left: 450px;
+    border-radius: 3px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    height: 550px;
+    margin-top: 50px;
+}

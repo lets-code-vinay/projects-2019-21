@@ -1,0 +1,21 @@
+.welcome-dashboard {
+  background-color:#FCE5D5;
+  .welcome {
+    text-align: center;
+    position: relative;
+    h1 {
+      position: absolute;
+      text-align: center;
+      font-weight: 700;
+      z-index: 99;
+      justify-content: center;
+      left: 10%;
+      top: 40%;
+    }
+    .dashBoardImage{
+      z-index: -1;
+      height: 90vh;
+      
+    }
+  }
+}

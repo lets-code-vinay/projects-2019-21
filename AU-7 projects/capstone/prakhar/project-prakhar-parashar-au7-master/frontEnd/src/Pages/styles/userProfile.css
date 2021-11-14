@@ -1,0 +1,56 @@
+#profileContainer {
+    display: grid;
+    grid-template-columns: auto auto ;
+    grid-gap: 10px;
+}
+   
+
+#profile {
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    width: 200px;
+    height: 300px;
+    margin: 30px;
+    overflow: hidden;
+    text-align: center;
+    display: grid;
+}
+
+
+#user {
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    width: 900px;
+    height: 500px;
+    margin: 30px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: auto auto auto;
+}
+
+
+#friendsPhotos{
+    
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    padding: 100px;
+    margin: 30px;
+}
+
+
+#posts {
+    
+    
+    padding: 100px;
+    margin: 30px;
+}
+
+.info {
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+#hobbieText {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+}

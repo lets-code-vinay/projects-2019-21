@@ -1,0 +1,12 @@
+#createPost{
+    text-align: center; 
+    margin-bottom: 100px;
+   
+}
+#createPost button {
+    outline: none;
+}
+#profileButton {
+    margin-left: 90%;
+    
+}

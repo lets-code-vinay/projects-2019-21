@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <br>
+
+    <h3><%- include('header') -%> </h3>
+    <br>
+    <h1>Tennis Play CRUD using HBS. Implement all four HTTP verbs. <br>I am giving html code here.   <div class="container-fluid"></h1>
+       <div class="row">
+       
+         <div class="offset-md-4 col-md-4">
+               <form action="/addTennisPlayer" method="POST">
+                   <label for="username">
+                       Name:
+                       <input class="form-control" type="text" name="name" id="username">
+                   </label>
+ 
+                   <label for="country">
+                       Country:
+                       <input class="form-control" type="text" name="country" id="country">
+                   </label>
+ 
+                   <p></p>
+ 
+                   <button class="btn btn-info" type="submit">Add</button>
+               </form>
+ 
+           </div>
+       </div>
+ 
+   </div>
+  
+</body>
+</html>
+	
+	
+

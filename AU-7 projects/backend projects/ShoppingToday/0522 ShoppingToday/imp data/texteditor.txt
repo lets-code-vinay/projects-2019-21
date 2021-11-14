@@ -1,0 +1,23 @@
+Text editor in  JavaScript
+
+1. Create new folder -> JS
+    new file main.JS
+2.  $(function(){
+    alert('are you ok?');  //For testing popup
+   })
+2.1 $(function(){
+    if($('textarea#ta').length){     #ta is id or textarea, provide id of textarea(ta) in add_page.ejs
+        CKEDITOR.replace('ta')
+    }
+})
+3. export this file or add to footer
+4. <script src="/public/js/main.js"></script>
+
+5. use CKeditor
+    <script src="//cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
+    paste it above the <js.main.js> file
+
+6. refresh the page. and done
+
+
+

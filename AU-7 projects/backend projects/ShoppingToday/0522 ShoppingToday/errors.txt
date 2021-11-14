@@ -1,0 +1,63 @@
+1. app.use(expressValidator({
+        ^
+    TypeError: expressValidator is not a function
+    Solution:- degrade expressValidator package to 5.3.1
+
+2. 'errors' is not defined
+    Solution:- Set glabal error variable at app.js like
+    app.locals.errors = null;
+    restart the server
+
+3.  AssertionError [ERR_ASSERTION]: a req.session is required! at  /node_modules/flash/index.js:6:5
+    solution:- use --> app.use(flash()) after the app.use(session({}))
+
+
+4. throw er; // Unhandled 'error' event
+    TypeError: Cannot read property 'flash' of null
+______________________________________________    
+5.  3,4 not solved
+    Solution:- in res.save() replace (req, res) with Page.findOne({slug:slug}),(err, page)
+
+6.  Add page was not showing
+    Solution:- 1. dont use ('/') in res.render()
+               2. look at routes and href links
+
+7. After adding page it is not redirecting to admin/pages
+    7.1  Cannot GET /admin/pages/admin/pages
+    Solution:- res.redirect('/admin/pages');  add this in post method
+
+8.   >> 17|     <% pages.forEach(function(page) {%>
+    Cannot read property 'forEach' of undefined
+    Solution:-   Self fixed.. Restart System once, change port no.
+    
+9. admin/pages reordering is not sequelized
+Solution:-
+
+
+10. TypeError: Cannot read property 'title' of null
+    Solution: - could be typo error, like (req. params. idS)
+
+11. { ObjectParameterError: Parameter "filter" to findOne() must be an object, got 5ec2635c937c81dd6812a764
+    solution: - Change findOne to findById
+
+12. >> 6| <form method="POST" action="/admin/categories/edit-page/<%= slug %>" >
+    slug is not defined
+    Solution:-  replace slug with <%= cat: _id %>
+
+13. SyntaxError: missing ) after argument list in /media/Assignment CC Robin/0515 shoppingcart/views/admin/edit_category.ejs while compiling ejs
+    <form method="POST" action="/admin/categories/edit-category/<%= id %>"> instead <%= cat:_id%>
+
+14. TypeError: Cannot read property 'replace' of undefined
+    Solution:- replace ar slug = req.slug.replace(/\s+/g, '-').toLowerCase(); with ar slug = title.replace(/\s+/g, '-').toLowerCase();
+
+15. Cannot GET /admin/categories/5ec2d7013f24fc64461ba9e2
+    Solution:- Use res.redirect('/admin/categories'); instead of res.redirect('/admin/categories'+id);
+
+16. TypeError: Cannot read property 'image' of null
+    Solution:- Typo error in Post of price: price2, which was price= price
+
+17. ReferenceError: imgaeFile is not defined
+    Solution:- typo error imageFile instead of imgaeFile
+
+
+

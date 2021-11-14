@@ -1,0 +1,12 @@
+<% include(../_layouts/header) %>
+
+    <% Object.keys(messages).forEach(function (type) { %>
+      <div class="alert alert-<%= type %>">
+      <% messages[type].forEach(function (message) { %>
+        <%= message %>
+      <% }) %>
+    </div>     
+    <% }) %>
+ 
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+  <% include(../_layouts/footer) %>

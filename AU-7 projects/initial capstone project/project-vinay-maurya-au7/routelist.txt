@@ -1,0 +1,12 @@
+1. post --> 
+    localhost:5000/api/users/register
+
+    {
+    "name":"Apple",
+    "lastName":"Fruit",
+    "userName": "0000",
+    "email":"apple@gmail.com",
+    "password": "123456"
+}
+
+2.

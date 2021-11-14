@@ -1,0 +1,16 @@
+<%- include('../_layouts/adminheader') %>
+
+<h2 class="page-title"> Edit Category</h2>
+<a href="/admin/categories" class="btn btn-primary ">Back to all Categories</a>
+<br> <br>
+<form method="POST" action="/admin/categories/edit-category/<%= id %>" >
+    <div class="form-group">
+        <label for=" ">Title</label>
+        <input  name="title" value="<%= title %>" placeholder="Title" class="form-control">
+    </div>
+    <button class="btn btn-primary"> Submit</button>
+
+</form>
+
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+<%- include('../_layouts/adminfooter') %>  <!--no space after include-->

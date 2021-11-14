@@ -1,0 +1,4 @@
+db- emommerce
+pw-HJumHAtrLQBK1AQX
+name- ecommerce
+mongodb+srv://<username>:<password>@cluster0.lxhhh.mongodb.net/<dbname>?retryWrites=true&w=majority

@@ -1,0 +1,5 @@
+biz corner
+bizcorner.herokuapp.com
+signup- no verification
+default image in profile
+sidebar

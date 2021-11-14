@@ -1,0 +1,83 @@
+1. post -->  user Signup
+    localhost:5000/api/users/register
+
+    {
+    "name":"Apple",
+    "lastName":"Fruit",
+    "userName": "0000",
+    "email":"apple@gmail.com",
+    "password": "123456"
+}
+
+2.   post --> user login  paste "authentication-token' in header without 'Bearer" as follow
+        authentication-token -> - eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWY2ZDE2ZmY1MDEwY2MyMWM0Yjc4YmVlIn0sImlhdCI6MTYwMTA4NDI4OCwiZXhwIjoxNjAxMDg3ODg4fQ.iJHzXcDRQ7OTliYLQDQHtMbEPa7QFOt3ceeYc0hZwuk
+    localhost:5000/api/users/login
+
+    {
+    "email":"cherRy@gmail.com",
+    "password": "123456"
+    }
+
+3. get --> to get all users
+    localhost:5000/api/users/users
+
+4. get --> to get user by id
+    localhost:5000/api/users/get_user_by_id/5f6bacc75206aa2694e190d3
+
+5. get --> to get user by email
+    localhost:5000/api/users/get_user_by_email/banana@gmail.com
+
+6. get --> to get all the posts
+   localhost:5000/api/posts/
+
+7. get --> to get recent posts
+     localhost:5000/api/posts/the_most_recent
+
+8. get --> to get most_liked posts
+    localhost:5000/api/posts/most_liked
+
+9. get --> to get most_commented posts    localhost:5000/api/posts/the_most_commented
+
+10 get --> get the post by id
+    localhost:5000/api/posts/single_post/5f6e1245e8819b0f8caf11f4
+
+11 get --> get posts by userid
+    localhost:5000/api/posts/user_posts/5f6cc032b7ea611ca4c1b4a9
+
+12 get --> logged in user posts 
+            apply authrization code   authentication-token : without bearer
+    localhost:5000/api/posts/user_posts
+
+13 post --> create category
+            apply authrization code in form-data   authentication-token : without bearer
+    localhost:5000/api/categories/create
+                name: vegetables
+                categoryImage: select categoryImage
+
+14. get --> get all category 
+        localhost:5000/api/categories/getcategory
+
+
+15. post --> post products  in form data authentication-token : without bearer
+    localhost:5000/api/products/create
+            name            | Apple
+            price           | 50
+            description     | Kashmiri Apple
+            category        | 5f71534fc5102a2e18b35caf
+            quantity        | 100
+            productPictures | add file
+            productPictures | add file
+            productPictures | add file
+            productPictures | add file
+
+16. get --> get all products
+            localhost:5000/api/products
+
+17. get --> get product by id
+            localhost:5000/api/products/:product
+
+18. get --> get product by date 
+            localhost:5000/api/products/latestproducts
+
+
+
